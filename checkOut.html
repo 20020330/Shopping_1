@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/checkout.css">
+    <link rel="stylesheet" href="./assets/css/shopAppItem.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/setting.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Main</title>
+    <script>
+        let profile = JSON.parse(localStorage.getItem("profile"));
+        if (profile == null) {
+            window.open("/Login.html", "_self");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="checkout-right">
+        <div class="checkout-right__order">
+            <div class="checkout-right__order-subtotal">
+                <div class="checkout-right__order-subtotal--left">Sub Total (0 item)
+                </div>
+                <div class="checkout-right__order-subtotal--right">0$</div>
+            </div>
+            <div class="checkout-right__order-ship">
+                <div class="checkout-right__order-ship--left">Shipping Fee:</div>
+                <div class="checkout-right__order-ship--right">Free </div>
+            </div>
+            <div class="checkout-right__order-Total">
+                <div class="checkout-right__order-Total--left">Total:</div>
+                <div class="checkout-right__order-Total--right">0$</div>
+            </div>
+        </div>
+        <div class="checkout-right__info">
+            <form id="form" action="/checkOut.html" method="POST">
+                <div class="checkout-right__info-name">
+                    <div class="checkout-right__info--left">Name:</div>
+                    <div class="checkout-right__info--right"></div>
+                </div>
+                <div class="checkout-right__info-phone">
+                    <div class="checkout-right__info-phone--left">Phone:</div>
+                    <div class="checkout-right__info-phone--right"></div>
+                </div>
+                <div class="checkout-right__info-email">
+                    <div class="checkout-right__info-email--left">Email:</div>
+                    <div class="checkout-right__info-email--right"></div>
+
+                </div>
+                <div class="checkout-right__info-address">
+                    <div class="checkout-right__info-address--left">Address:</div>
+                    <input type='text' id='address' class="checkout-right__info-address--right"
+                        placeholder="Please enter your shipping address" />
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Avatar</label>
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+                  
+                <button type="submit" class="checkout-btn">Please add product to cart</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src='./checkOut.js'></script>
+
+</body>
+
+</html>

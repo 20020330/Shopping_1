@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/shopApp.css">
+    <link rel="stylesheet" href="./assets/css/shopAppItem.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/setting.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <header class="header">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-12 m-12 c-12">
+                        <div class="header__menu">
+                            <div class="header__menu-search-tablet">
+                                <label class="btn-input-search-icon" for="btn-input-search-icon">
+                                    <i class="header__menu-search-tablet-icon fas fa-search"></i>
+                                </label>
+                            </div>
+                            <div class="header__menu-left">
+                                <a href="/" class="header__menu-logo">
+                                    <img src="https://d1rn6kzjmi8824.cloudfront.net/wp-content/uploads/2020/07/16065923/Grocery.svg"
+                                        alt="" class="header__menu-img-logo" />
+                                </a>
+                            </div>
+                            <div class="header__menu-search hide-on-tablet hide-on-mobile">
+                                <div class="header__menu-search--background">
+                                    <form onSubmit={submitValueSearch}>
+                                        <i class="header__menu-search-icon fas fa-search"></i>
+                                        <input class="header__menu-search-input" type="text"
+                                            placeholder="Search your product" />
+                                    </form>
+                                </div>
+                            </div>
+                            <input type="checkbox" class="btn-input-search" id="btn-input-search-icon" />
+                            <div class="header__menu-search-mini  ">
+                                <div class="header__menu-search-mini--background">
+                                    <label for="btn-input-search-icon">
+                                        <i class="header__menu-search-icon-mini fas fa-arrow-left"></i>
+                                    </label>
+                                    <div class="search-mini">
+                                        <i class="header__menu-search-icon-mini fas fa-search"></i>
+                                        <form class="form-mini" onSubmit={submitValueSearch}>
+                                            <input class="header__menu-search-input-mini" type="text"
+                                                placeholder="Search product" />
+                                        </form>
+                                    </div>
+                                    <label for="header__menu-navbar-cart" class="cart-mini header__menu-navbar">
+                                        <i class="header__menu-navbar-icon fas fa-shopping-cart"></i>
+                                        <label for="header__menu-navbar-cart"
+                                            class="header__menu-navbar--count-mini">0</label>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="header__menu-right">
+                                <div class="my-account">Hi </div>
+                                <label for="header__menu-navbar-cart" class="header__menu-navbar">
+                                    <i class="header__menu-navbar-icon fas fa-shopping-cart"></i>
+                                    <label for="header__menu-navbar-cart" class="header__menu-navbar--count">0</label>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <input type="checkbox" name="" class="navbar-input-cart" id="header__menu-navbar-cart" />
+        <label for="header__menu-navbar-cart" class="overflow"></label>
+        <div class="cart">
+            <div class="cart__hearder">
+                <div class="cart__hearder--left">
+                    <i class="fas fa-shopping-bag cart__hearder-bag"></i>
+                    <div class="cart__hearder-count">0 item</div>
+                </div>
+                <label for="header__menu-navbar-cart" class="cart__hearder--right">
+                    <i class="fas fa-times cart__hearder-close"></i>
+                </label>
+            </div>
+
+            <div class="cart__list">
+                <div class="cart__list-item">
+
+                </div>
+            </div>
+            <label for="header__menu-navbar-cart" class="cart__checkout">
+                <a href="/checkOut.html" class="cart__checkout-inner">
+                    <h4 class="cart__checkout-item--left"> Checkout</h4>
+                    <p class="cart__checkout-total">
+                        0$
+                    </p>
+                </a>
+
+            </label>
+        </div>
+        <!-- Appshop -->
+        <div class="app_container"> 
+            <div class="app_container--left">
+                <nav class="app_container__navbar hide-on-tablet hide-on-mobile">
+                    <ul class="app_container__navbar-list">
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/Fresh-Vegetables.svg'
+                                alt="" />
+                            <p class="app_container__nabar-title">Fresh Vegetables</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/Fresh-Fruites.svg' alt="" />
+                            <p class="app_container__nabar-title">Fresh Fruits</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/Dairy-eggs.svg' alt="" />
+                            <p class="app_container__nabar-title">Dairy & Eggs</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/Bakery.svg' alt="" />
+                            <p class="app_container__nabar-title">Breakfast</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/Frozen.svg' alt="" />
+                            <p class="app_container__nabar-title">Frozen</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/Frozen.svg' alt="" />
+                            <p class="app_container__nabar-title">Organic</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/canned-food.svg' alt="" />
+                            <p class="app_container__nabar-title">Canned Food</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/coffee-cup.svg' alt="" />
+                            <p class="app_container__nabar-title">Coffee & Snacks</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/Beverage-Juice.svg' alt="" />
+                            <p class="app_container__nabar-title">Beverage & Juice</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="app_container__navbar-item">
+                            <img class="app_container__navbar-item-img" src='./assets/img/Sauces-Jams.svg' alt="" />
+                            <p class="app_container__nabar-title">Sauces & Jams</p>
+                            <i class="fas fa-chevron-right"></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="app_container--right">
+                <div class="gridd wide sm">
+                    <div class="row sm-gutter">
+                        <div class="col l-12 m-12 c-12">
+                            <div class="app_container-banner">
+                                <h2 class="app_container-banner-delivered">Products Delivered in 90 Minutes</h2>
+                                <br />
+                                <h3 class="app_container-banner-day"> Get your products delivered at your doorsteps
+                                    all day
+                                    everyday</h3>
+                            </div>
+                        </div>
+                        <div class="col l-12 m-12 c-12">
+                            <div class="sortfirstbox">
+                                <label for="categories__checkbox-id" class="categories">
+                                    <div class="categories-text">Categories</div>
+                                    <div class="categories__icon">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </label>
+                                <input type="checkbox" class="categories__checkbox" name="categories__checkbox"
+                                    id="categories__checkbox-id" />
+                                <div class="categories__checkbox-item">
+                                    <label for="categories__checkbox-id" class="categories categories-item">
+                                        <div class="categories-text">Categories</div>
+                                        <div class="categories__icon">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                    </label>
+                                    <nav class="app_container__navbar app_container__navbar-categories ">
+                                        <label for="categories__checkbox-id">
+                                            <ul class="app_container__navbar-list">
+                                                <li class="app_container__navbar-item">
+                                                    <img class="app_container__navbar-item-img"
+                                                        src='./assets/img/Fresh-Vegetables.svg' alt="" />
+                                                    <p class="app_container__nabar-title">Fresh Vegetables</p>
+                                                    <i class="fas fa-chevron-right"></i>
+                                                </li>
+                                            </ul>
+                                        </label>
+                                    </nav>
+                                </div>
+                                <div class="filter-by">
+                                    <div class="filter-bys">
+                                        <div class="filter-by__title">Filter By</div>
+                                        <i class="filter-by__icon fas fa-chevron-down"></i>
+                                        <div class="filter-by__warrap">
+
+                                            <div class="filter-by__list-star-price">
+                                                <h3 class="filter-by__list-star-price-title">Price: </h3>
+                                                <label class="container">Under 100$
+                                                    <input type="radio" name="radio" />
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container">100$ to 200$
+                                                    <input type="radio" name="radio" />
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container">100$ to 200$
+                                                    <input type="radio" name="radio" />
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="container">Above 200$
+                                                    <input type="radio" name="radio" />
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sort-by">
+                                    <select class="sort-by__select" name="cars">
+                                        <option class="sort-by__select-value" hidden={true}>Sort Products By
+                                        </option>
+                                        <option class="sort-by__select-value" value={1}>List products sale</option>
+                                        <option class="sort-by__select-value" value={2}>Price: Low to High</option>
+                                        <option class="sort-by__select-value" value={3}>Price: High to low</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listItem" style="width: 100%; display: flex;flex-wrap: wrap;">
+                            <div class="col l-2-4 m-3 c-6 ">
+                                <div class="app_container__products-item">
+                                   
+                                    <div class="app_container__products-price">
+                                        <p class="products-real-cost">12$</p>
+                                    </div>
+
+                                    <button class="app_container__products-add">Add to cart</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- {listProducts} -->
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--End  Appshop -->
+
+
+    </div>
+    <script type="text/javascript" src='./index.js'></script>
+
+</body>
+
+</html>

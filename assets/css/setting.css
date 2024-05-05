@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #009e7f;
+  --text-color: #212121;
+  --tetx-color-des: #5a5a5a;
+  --primary-font: "Roboto";
+  --secondary-font: "Rufina";
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* (1 rem = 10px, 1.6 rem = 16px) */
+  line-height: 1.6rem;
+  font-family: 'Segoe UI', Tahoma;
+  box-sizing: border-box;
+  font-weight: 300;
+  background-color: #e8e8e8;
+
+  
+}
+.wapper{
+  overflow: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  display: block;
+  text-decoration: none;
+}

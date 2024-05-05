@@ -1,0 +1,600 @@
+.load-more{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+button.load-more-btn {
+  justify-content: center;
+  display: flex;
+  padding: 7px;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #009e7f;
+  font-weight: 700;
+  cursor: pointer;
+}
+.app_container--left {
+    position: fixed;
+    width: 23%;
+    overflow-y: auto;
+    left: 0;
+    bottom: 0;
+    top: 94px;
+    background-color: #fff;
+  }
+  /* width */
+  .app_container--left::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .app_container--left::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .app_container--left::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .app_container--left::-webkit-scrollbar-thumb:hover {
+    background: rgb(83, 83, 83); 
+  }
+
+
+  /* width */
+  .app_container__navbar::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .app_container__navbar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  .app_container__navbar::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .app_container__navbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(83, 83, 83); 
+  }
+  
+  .active-navbar{
+    background-color: rgba(128, 128, 128, 0.712);
+  }
+  .app_container__navbar-item {
+    cursor: pointer;
+    display: flex;
+
+    padding: 12px;
+    
+  }
+  .app_container__navbar-item:active{
+    background-color: gray;
+  }
+  .app_container__products-link{
+    position: relative;
+  }
+  .app_container__products-sale {
+      position: absolute;
+      right: 0;
+      background-color: black;
+      color: white;
+      font-size: 1.2rem;
+      padding: 5px 10px;
+      line-height: 1;
+      border-radius: 6px;
+      font-weight: 600;
+  }
+  
+  .app_container__navbar-item{
+    list-style: none;
+   
+  }
+  .app_container__navbar-link {
+    padding: 20px 0;
+    border-bottom: 1px solid;
+    font-size: 1.6rem;
+    color: #5A5A5A;
+  }
+
+  .app_container__products-item {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+  }
+  .app_container__products-item:hover{
+    margin-top: 5px;
+    transition: 0.3s;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
+  }
+  .app_container__products-img {
+    object-fit: cover;
+  }
+  
+  .app_container__products-price {
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .app_container__products-current-cost{
+    font-size: 1.8rem;
+    color: black;
+  }
+  .app_container__products-real-cost{
+    font-size: 1.5rem;
+    color: #858585;
+    margin-left: 15px;
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+  }
+  
+  .app_container__products-title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #5A5A5A;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  
+  }
+  .app_container__products-add {
+    border: none;
+    color: white;
+    width: 100%;
+    outline: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+   
+    font-size: 1.6rem;
+  }
+  
+  .app_container__products-item-counter {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    
+  }
+  
+  .app_container__products-item-counter-update {
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  
+  .app_container__products-item-counter-value {
+    flex: 1;
+    margin: auto;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .filter-by__warrap {
+  
+    width: 320px;
+    height: 170px;
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid #00000021;
+    display: none;
+    border-radius: 4px;
+    top: 30px;
+  }
+  .filter-by-checkbox{
+    display: none;
+  }
+  .filter-by-checkbox:checked ~ .filter-by__warrap {
+    display: flex;
+  }
+  .filter-by__list{
+    width: 50%;
+  }
+  h3.filter-by__list-star-price-title,.filter-by__list-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .filter-by__title {
+    width: 140px;
+    height: 30px;
+    background-color: white;
+    border-radius: 2px;
+    color: #212121;
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 6px;
+  }
+  i.filter-by__icon.fas.fa-chevron-down {
+    position: absolute;
+    right: 0;
+    padding: 10px 5px;
+  }
+  .filter-bys{
+    display: flex; 
+    position: relative; 
+    width: 140px;
+    cursor: pointer;
+  
+  }
+  .filter-by:hover .filter-by__warrap{
+    display: flex;
+  }
+  .sortfirstbox {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    background-color: rgb(0, 0, 0, 0.03);
+    align-items: center;
+    padding: 12px;
+  }
+  .filter-by__list-title{
+    margin-bottom: 10px;
+  }
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #009e7f;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 6px;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+  .app_container__navbar-link{
+    background-color: #858585;
+  }
+  
+  .sort-by{
+    margin-left: auto;
+    background-color: white;
+  }
+  .sort-by__select {
+    width: 160px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .filter-by__list-rating-star1{
+    width: 108px; 
+    margin-top: -10px; 
+    margin-bottom: 20px;
+  }
+  .filter-by__list-rating-star2 {
+    width: 108px; 
+    margin-top: -10px; 
+    margin-bottom: 20px;
+  }
+  .filter-by__list-rating-star3 {
+    width: 108px; 
+    margin-top: -10px; 
+    margin-bottom: 20px;
+  }
+  .filter-by__list-rating-star1 i{
+    color: #ed143d80;
+    margin: 0 0 5px 0;
+    padding-right: 1px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  .filter-by__list-star2  {
+    margin: 7px 0;
+  }
+  .filter-by__list-rating-star2 i{
+    color: #ed143d80;
+    margin: 0 0 5px 0;
+    padding-right: 1px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  .filter-by__list-rating-star3 i{
+    color: #ed143d80;
+    margin: 0 0 5px 0;
+    padding-right: 1px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  .filter-by__list-rating__checked, .filter-by__list-rating__checked2, .filter-by__list-rating__checked3{
+    display: none;
+  }
+  .filter-by__list-rating__checked:checked ~ .filter-by__list-rating-star1 i{
+    color: crimson;
+  }
+  .filter-by__list-rating__checked2:checked ~ .filter-by__list-rating-star2 i{
+    color: crimson;
+  }
+  .filter-by__list-rating__checked3:checked ~ .filter-by__list-rating-star3 i{
+    color: crimson;
+  }
+  .filter-by__list-rating-star1 .filter-by__list-star {
+    position: relative;
+    width: 116px;
+  }
+  .filter-by__list-rating-star2 .filter-by__list-star2{
+    position: relative;
+    width: 116px;
+  }
+  .filter-by__list-rating-star3 .filter-by__list-star3{
+    position: relative;
+    width: 116px;
+  }
+  .filter-by__list-rating-star1 .filter-by__list-star-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101px;
+    overflow: hidden;
+    clip-path: inset(0 0% 0 0);
+  }
+  .filter-by__list-rating-star2 .filter-by__list-star-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101px;
+    overflow: hidden;
+    clip-path: inset(0 20% 0 0);
+  }
+  .filter-by__list-rating-star3 .filter-by__list-star-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101px;
+    overflow: hidden;
+    clip-path: inset(0 40% 0 0);
+  }
+  .rating{
+    width: 84px; 
+    margin-top: -10px; 
+    margin-bottom: 2px;
+  }
+  .rating i{
+    color: crimson;
+    margin: 0 0 5px 0;
+    padding-right: 1px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .rating .star{
+    position: relative;
+    width: 84px;
+  }
+  .rating .star-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 84px;
+    overflow: hidden;
+    clip-path: inset(0 50% 0 0);
+  }
+  .categories{
+    margin-right: 10px;
+    height: 30px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .categories-text{
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: bold;
+  }
+  .categories__icon{
+    font-size: 1.6rem;
+    margin-left: auto;
+  }
+  .categories__checkbox-item{
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: white;
+    top: 0; left: 0; right: 0;bottom: 0;
+    z-index: 100; 
+    overflow-y: auto;
+  }
+  .categories__checkbox{
+    display: none;
+  }
+  .categories-item{
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+  }
+  .categories__checkbox-item{
+    display: none;
+  }
+  .categories__checkbox:checked ~ .categories__checkbox-item{
+    display: block;
+  }
+
+ 
+  .app_container-banner-day{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5A5A5A;
+  }
+/* mobile and Tablet */
+@media (max-width: 1023px){
+    /* :root{
+        --header-height: 68px;
+        --navbar-height: 0px;
+    } */
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .grid.wide.sm {   /*width để padding 2 bên trái phải*/
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    
+    .app_container--right{
+        width: 100%;
+    }
+    .app_container--left{
+        display: none;
+    }
+    .categories{
+        display: flex;
+    }
+    .warrap-footer{
+        display: block;
+
+    }
+    .footer__left{
+        text-align: center;
+        margin-top: 12px;
+    }
+    .footer__right{
+        text-align: center;
+        margin-top: 12px;
+    }
+}
+/* Tablet */
+@media (min-width: 1023px) and (max-width: 1239px){
+    .gridd.wide{
+        max-width: 748px;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+    .header__menu-left{
+        margin: auto;
+    }
+    .header__menu-search-tablet{
+        display: block;
+    }
+    .app_container-banner-delivered{
+        font-size: 3rem;
+    }
+    .app_container-banner-day{
+        font-size: 2rem;
+    }
+    
+}
+/*mobile*/
+@media (max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .header{height: 80px;}
+    .header__menu{height: 80px;}
+    .app_container{margin-top: 85px;}
+    .header__menu-search-mini{height: 80px;}
+    .header__menu-search-mini--background{
+        height: 80px;
+    }
+    .header__menu-left{
+        margin: auto;
+    }
+    .header__menu-search-tablet{
+        display: block;
+    }
+    .app_container{
+        padding: 0 4px;
+    }
+    .header__menu{
+        margin: 0 4px;
+    }
+    .header__menu-navbar {
+        margin: 0 14px 0 30px;
+    }
+    .app_container--right{
+        padding: 0;
+    }
+    .app_container-banner-delivered{
+        font-size: 2.4rem;
+    }
+    .app_container-banner-day{
+        font-size: 2rem;
+    }
+    .filter-by{display: none;}
+}
